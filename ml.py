@@ -4,7 +4,7 @@ import pickle
 
 st.set_page_config(page_title='Marks Predictor', layout='centered')
 
-st.title('Student Marks Predictor')
+st.title('🧑🏻‍🎓 Student Marks Predictor')
 st.write('Enter The Number of Hours Studied (1-10) And **Click Predict** To Get The Predicted Marks')
 
 #load the model
@@ -25,4 +25,5 @@ predict_btn = st.button('Predict Score')
 
 if predict_btn:
     prediction = model.predict([[hours]])
-    st.success(f"Prediction Mark: {prediction[0]}")
+    st.success(f"Prediction Mark: {prediction[0]:.2f}")
+
